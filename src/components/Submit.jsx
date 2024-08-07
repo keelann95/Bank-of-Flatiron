@@ -21,7 +21,7 @@ const Submit = () => {
   const handleSubmit = (e)=> {
     e.preventDefault();
 
-    fetch("http://localhost:3005/transactions", {
+    fetch("https://bank-backend-livid.vercel.app/transactions", {
       method: "POST",
       headers: {
         "Content-type": "application/json",

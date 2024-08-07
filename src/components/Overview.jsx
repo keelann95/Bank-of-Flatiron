@@ -9,7 +9,7 @@ const Overview = () => {
   const[search, setSearch] = useState('')
 
   const handleDelete = (id) =>{
-    fetch(`http://localhost:3005/transactions/${id}`,{
+    fetch(`https://bank-backend-livid.vercel.app/transactions/${id}`,{
       method:"DELETE",
     })
     .then(res => res.json())
@@ -23,7 +23,7 @@ const Overview = () => {
   const [transactions, setTransactions] = useState([])
 
   useEffect(()=>{
-    fetch("http://localhost:3005/transactions")
+    fetch("https://bank-backend-livid.vercel.app/transactions")
     .then(res => res.json())
     .then((transactions) => setTransactions(transactions))
   },[transactions])
