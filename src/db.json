@@ -83,27 +83,6 @@
       "description": "Venmo, Pay Roommate for Rent",
       "category": "Housing",
       "amount": -975
-    },
-    {
-      "id": "de13",
-      "date": "0006-05-04",
-      "description": "South by Southwest Quinoa Bowl at Fresh & Co",
-      "category": "keelanns",
-      "amount": "800"
-    },
-    {
-      "id": "a6aa",
-      "transaction": {
-        "id": "de13",
-        "date": "0006-05-04",
-        "description": "South by Southwest Quinoa Bowl at Fresh & Co",
-        "category": "keelanns",
-        "amount": "800"
-      },
-      "date": "2039-05-06",
-      "description": "South by Southwest Quinoa Bowl at Fresh & Co",
-      "category": "dfghjn",
-      "amount": "85"
     }
   ]
 }
