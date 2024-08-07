@@ -30,11 +30,11 @@ const Submit = () => {
       body: JSON.stringify(formData),
     })
     .then((res) => res.json())
-    .then((transaction)=> setFormData({transaction, ...formData}))
+    .then((transaction)=> setFormData({transaction}))
     setFormData({ date: "", description: "", category: "", amount: "" });
 
   }
- 
+
 
   return (<>
  <div className="max-w-87  mt-10">

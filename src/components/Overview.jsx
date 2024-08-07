@@ -3,7 +3,11 @@
 // import { data } from "autoprefixer"
 import { useEffect, useState } from "react"
 
+
 const Overview = () => {
+
+  const[search, setSearch] = useState('')
+
    
   const [transactions, setTransactions] = useState([])
 
@@ -11,12 +15,20 @@ const Overview = () => {
     fetch("http://localhost:3005/transactions")
     .then(res => res.json())
     .then((transactions) => setTransactions(transactions))
-  },[])
+  },[transactions])
 
    
   return (
     <>    
-    <div className='text-red-50  flex  justify-center  '>
+    <div className='text-red-50  '>
+    <div className=' flex justify-end p-4 pr-12 '>
+          <input
+            className=" text-yellow-950 pl-6 pr-24 rounded-2xl outline-none focus:outline-yellow-600"
+            type="text"
+            placeholder="Search..."
+            onChange={(e) => setSearch(e.target.value)}
+          />
+        </div>
 <table className='text-center border-separate border-spacing-x-40 border-spacing-y-9 '>        
     <thead className=' text-red-600 text-2xl'>
             <tr>
@@ -28,7 +40,9 @@ const Overview = () => {
         </thead>
         <tbody>
 
-        _{transactions.map((transaction)=>
+        {transactions.filter((transaction)=>{
+          return search.toLowerCase()==='' ? transaction : transaction.description.toLowerCase().includes(search)
+        }).map((transaction)=>
           <>
             <tr key={transaction.id}>
                 <td>{transaction.date}</td>

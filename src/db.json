@@ -85,88 +85,25 @@
       "amount": -975
     },
     {
-      "id": "b164",
-      "date": "2024-08-08",
-      "description": "kjefnle",
-      "category": "Food",
-      "amount": "234567890"
-    },
-    {
-      "id": "d549",
-      "date": "2024-08-17",
-      "description": "South by Southwest Quinoa Bowl at Fresh & Cokwj",
-      "category": "vo",
-      "amount": "7887656788765678"
-    },
-    {
-      "id": "38c5",
-      "transaction": {
-        "id": "d549",
-        "date": "2024-08-17",
-        "description": "South by Southwest Quinoa Bowl at Fresh & Cokwj",
-        "category": "vo",
-        "amount": "7887656788765678"
-      },
-      "date": "2024-08-17",
-      "description": "South by Southwest Quinoa Bowl at Fresh & Cokwj",
-      "category": "vo",
-      "amount": "7887656788765678"
-    },
-    {
-      "id": "ccb7",
-      "transaction": {
-        "id": "d549",
-        "date": "2024-08-17",
-        "description": "South by Southwest Quinoa Bowl at Fresh & Cokwj",
-        "category": "vo",
-        "amount": "7887656788765678"
-      },
-      "date": "2024-08-17",
-      "description": "South by Southwest Quinoa Bowl at Fresh & Cokwj",
-      "category": "vo",
-      "amount": "7887656788765678"
-    },
-    {
-      "id": "c515",
-      "date": "2024-08-03",
-      "description": "hey ",
-      "category": "lkergng",
-      "amount": "7"
-    },
-    {
-      "id": "8c1c",
-      "date": "2024-08-31",
-      "description": "567y8gvbn",
-      "category": "dfghjn",
-      "amount": "56768"
-    },
-    {
-      "id": "3592",
-      "date": "2024-08-17",
+      "id": "de13",
+      "date": "0006-05-04",
       "description": "South by Southwest Quinoa Bowl at Fresh & Co",
-      "category": "vo",
-      "amount": "10"
+      "category": "keelanns",
+      "amount": "800"
     },
     {
-      "id": "8f6e",
-      "date": "2024-08-24",
-      "description": "ui",
-      "category": "hin",
-      "amount": "9"
-    },
-    {
-      "id": "7c65",
-      "date": "2024-08-10",
-      "description": "OUOIN",
-      "category": "hin",
-      "amount": "768"
-    },
-    {
-      "id": "8c78",
-      "date": "2024-08-24",
-      "description": "South by Southwest Quinoa Bowl at Fresh & Cokwj",
-      "category": "hin",
-      "amount": "789"
+      "id": "a6aa",
+      "transaction": {
+        "id": "de13",
+        "date": "0006-05-04",
+        "description": "South by Southwest Quinoa Bowl at Fresh & Co",
+        "category": "keelanns",
+        "amount": "800"
+      },
+      "date": "2039-05-06",
+      "description": "South by Southwest Quinoa Bowl at Fresh & Co",
+      "category": "dfghjn",
+      "amount": "85"
     }
   ]
 }

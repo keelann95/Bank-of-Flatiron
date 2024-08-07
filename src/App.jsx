@@ -1,7 +1,7 @@
 // import React from "react";
 import PageTitle from "./components/PageTitle";
 import Overview from "./components/Overview";
-import SearchBar from "./components/SearchBar";
+// import SearchBar from "./components/SearchBar";
 import Submit from "./components/Submit";
 
 const App = () => {
@@ -9,7 +9,7 @@ const App = () => {
   return (<>
   
     <PageTitle />
-    <SearchBar />
+    
     <Overview />
     <Submit />
     </>
