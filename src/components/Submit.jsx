@@ -1,9 +1,44 @@
 // import React from 'react'
+import { useState } from "react";
 
 const Submit = () => {
+
+  const [formData, setFormData] = useState({
+    date: '',
+    description: '',
+    category: '',
+    amount: ''
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(formData => ({
+      ...formData,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e)=> {
+    e.preventDefault();
+
+    fetch("http://localhost:3005/transactions", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+        Accept: "application/json",
+      }, 
+      body: JSON.stringify(formData),
+    })
+    .then((res) => res.json())
+    .then((transaction)=> setFormData({transaction, ...formData}))
+    setFormData({ date: "", description: "", category: "", amount: "" });
+
+  }
+ 
+
   return (<>
  <div className="max-w-87  mt-10">
-      <form  className="bg-yellow-900 shadow-md rounded px-8 pt-6 pb-8 mb-4">
+      <form onSubmit={handleSubmit} className="bg-yellow-900 shadow-md rounded px-8 pt-6 pb-8 mb-4">
         <div className="mb-4">
           <label className="block text-red-500 text-sm font-bold mb-2" htmlFor="date">
             Date
@@ -13,6 +48,8 @@ const Submit = () => {
             id="date"
             type="date"
             name="date"
+            value={formData.date}
+            onChange={handleChange}
             required
           />
         </div>
@@ -25,6 +62,8 @@ const Submit = () => {
             id="description"
             type="text"
             name="description"
+            value={formData.description}
+            onChange={handleChange}
             placeholder="Transaction description"
            
             required
@@ -39,6 +78,8 @@ const Submit = () => {
             id="category"
             type="text"
             name="category"
+            value={formData.category}
+            onChange={handleChange}
             placeholder="Transaction category"
             
             required
@@ -53,6 +94,8 @@ const Submit = () => {
             id="amount"
             type="number"
             name="amount"
+            value={formData.amount}
+            onChange={handleChange}
             placeholder="Transaction amount"
             required
           />

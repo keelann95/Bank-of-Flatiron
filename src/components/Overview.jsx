@@ -1,6 +1,6 @@
 // import React from 'react'
 
-import { data } from "autoprefixer"
+// import { data } from "autoprefixer"
 import { useEffect, useState } from "react"
 
 const Overview = () => {
@@ -30,7 +30,7 @@ const Overview = () => {
 
         _{transactions.map((transaction)=>
           <>
-            <tr>
+            <tr key={transaction.id}>
                 <td>{transaction.date}</td>
                 <td>{transaction.description}</td>
                 <td>{transaction.category}</td>
