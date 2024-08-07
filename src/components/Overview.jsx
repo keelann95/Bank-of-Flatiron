@@ -1,6 +1,19 @@
 // import React from 'react'
 
+import { data } from "autoprefixer"
+import { useEffect, useState } from "react"
+
 const Overview = () => {
+   
+  const [transactions, setTransactions] = useState([])
+
+  useEffect(()=>{
+    fetch("http://localhost:3005/transactions")
+    .then(res => res.json())
+    .then((transactions) => setTransactions(transactions))
+  },[])
+
+   
   return (
     <>    
     <div className='text-red-50  flex  justify-center  '>
@@ -14,11 +27,14 @@ const Overview = () => {
             </tr>
         </thead>
         <tbody>
+
+        _{transactions.map((transaction)=>
+          <>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>{transaction.date}</td>
+                <td>{transaction.description}</td>
+                <td>{transaction.category}</td>
+                <td>{transaction.amount}</td>
                 <td>
               <button 
                 className='bg-red-500 hover:bg-yellow-600 transition duration-[0.7s] ease-in-out text-white font-bold py-2 px-4 rounded'
@@ -28,6 +44,8 @@ const Overview = () => {
               </button>
             </td>
             </tr>
+            </>
+            )}
         </tbody>
      </table>
     </div>
